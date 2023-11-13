@@ -1,20 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class Healthbar : MonoBehaviour
 {
-    // Start is called before the first frame update
-   [SerializeField] private Health playerHealth;
-   [SerializeField] private Image totalhealthBar;
-   [SerializeFIeld] private Image currenthealthBar;
+    [SerializeField] private Health playerHealth;
+    [SerializeField] private Image totalhealthBar;
+    [SerializeField] private Image currentHealthBar;
 
-   private void Start()
-   {
+    private void Start()
+    {
+        totalhealthBar.fillAmount = playerHealth.currentHealth    / 10;
+    }
 
-   }
-   private void update()
-   {
-        currenthealthBar.fillAmount = playerHealth.currentHealth / 10
-   }
+    private void Update()
+    {
+        currentHealthBar.fillAmount = playerHealth.currentHealth / 10;
+    }
 }
