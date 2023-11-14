@@ -24,6 +24,7 @@ public class Health : MonoBehaviour
         }
         else
         {
+            //anim.SetTrigger("die");
             if (!dead)
             {
                 anim.SetTrigger("die");
