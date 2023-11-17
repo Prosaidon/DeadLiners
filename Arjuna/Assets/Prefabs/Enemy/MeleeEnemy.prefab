@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
+  components:
+  - {fileID: 6651699079426359522}
 --- !u!114 &6651699079426359522
 MonoBehaviour:
   m_ObjectHideFlags: 0

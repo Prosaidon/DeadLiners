@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-   [Header ("Patrol Points")]
+    [Header ("Patrol Points")]
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
 
@@ -59,7 +57,7 @@ public class EnemyPatrol : MonoBehaviour
             movingLeft = !movingLeft;
     }
 
-        private void MoveInDirection(int _direction)
+    private void MoveInDirection(int _direction)
     {
         idleTimer = 0;
         anim.SetBool("moving", true);

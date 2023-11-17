@@ -7,6 +7,9 @@ public class Health : MonoBehaviour
     private Animator anim;
     private bool dead;
 
+    [Header("Component")]
+    [SerializeField] private Behaviour[] components;
+
     private void Awake()
     {
         currentHealth = startingHealth; // Ubah "currentHealt" menjadi "currentHealth"
@@ -30,7 +33,7 @@ public class Health : MonoBehaviour
                 anim.SetTrigger("die");
 
                 //Player
-                if(GetComponent<Player>() != null)
+                /*if(GetComponent<Player>() != null)
                    GetComponent<Player>().enabled = false;
 
                 //Enemy
@@ -39,7 +42,9 @@ public class Health : MonoBehaviour
                 
                 if(GetComponent<MeleeEnemy>() != null)
                     GetComponent<MeleeEnemy>().enabled = false;
-
+                */
+                foreach(Behaviour compinent in components)
+                    compinent.enabled = false;
                 dead = true;
             }
         }
