@@ -9,12 +9,9 @@ public class MainMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Mulai");
     }
-    public void Setting()
-    {
-        SceneManager.LoadScene("Setting");
-    }
+
     public void Keluar()
     {
-        SceneManager.LoadScene("Keluar");
+        Application.Quit();
     }
 }
