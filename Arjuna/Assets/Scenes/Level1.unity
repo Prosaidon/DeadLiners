@@ -619,6 +619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPatrol (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4517261628113477330, guid: b0c49dae733bd7d42b406ef6552993f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1919,7 +1923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1976758718
 MonoBehaviour:
   m_ObjectHideFlags: 0

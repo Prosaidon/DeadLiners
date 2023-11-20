@@ -54,4 +54,9 @@ public class Health : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
 }
