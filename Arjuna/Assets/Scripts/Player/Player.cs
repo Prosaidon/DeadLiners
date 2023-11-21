@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Movement Parameters")]
     [SerializeField] private float speed;
+
+    [Header("Layer")]
+    private LayerMask groundLayer; // Tambahkan groundLayer
+    
     private Rigidbody2D body;
     private Animator anim;
     private bool grounded; // Tambahkan variabel grounded
     private BoxCollider2D boxCollider; // Tambahkan boxCollider
-    private LayerMask groundLayer; // Tambahkan groundLayer
     private float horizontalInput;
     private void Awake()
     {
