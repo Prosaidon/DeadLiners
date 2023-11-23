@@ -9,6 +9,10 @@ public class Player : MonoBehaviour
 
     [Header("Layer")]
     private LayerMask groundLayer; // Tambahkan groundLayer
+
+    
+    [Header("SFX")]
+    [SerializeField] private AudioClip jumpSound;
     
     private Rigidbody2D body;
     private Animator anim;
@@ -45,6 +49,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
+        SoundManager.instance.PlaySound(jumpSound);
         body.velocity = new Vector2(body.velocity.x, speed);
         anim.SetTrigger("jump");
         grounded = false;

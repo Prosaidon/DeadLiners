@@ -10,6 +10,9 @@ public class Health : MonoBehaviour
     [Header("Component")]
     [SerializeField] private Behaviour[] components;
 
+    [Header("Death Sound")]
+    [SerializeField] private AudioClip deathSound;
+
     private void Awake()
     {
         currentHealth = startingHealth; // Ubah "currentHealt" menjadi "currentHealth"
@@ -46,6 +49,7 @@ public class Health : MonoBehaviour
                 foreach(Behaviour compinent in components)
                     compinent.enabled = false;
                 dead = true;
+                SoundManager.instance.PlaySound(deathSound);
             }
         }
     }
