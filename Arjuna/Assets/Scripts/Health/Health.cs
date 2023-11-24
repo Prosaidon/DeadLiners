@@ -35,14 +35,14 @@ public class Health : MonoBehaviour
         if (invulnerable) return;
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
 
-        if (currentHealth > 0)
+        /*if (currentHealth > 0)
         {
             anim.SetTrigger("hurt");
             StartCoroutine(Invunerability());
             //SoundManager.instance.PlaySound(hurtSound);
         }
         else
-        {
+        {*/
             //anim.SetTrigger("die");
             if (!dead)
             {
@@ -52,7 +52,7 @@ public class Health : MonoBehaviour
                 dead = true;
                 SoundManager.instance.PlaySound(deathSound);
             }
-        }
+        //}
     }
 
     public void AddHealth(float _value)

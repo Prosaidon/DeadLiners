@@ -4,6 +4,7 @@ public class EnemyProjectile : EnemyDamage
 {
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
+     [SerializeField] private LayerMask enemyLayer;
     private float lifetime;
     private Animator anim;
     private BoxCollider2D coll;
@@ -26,6 +27,7 @@ public class EnemyProjectile : EnemyDamage
     private void Update()
     {
         if (hit) return;
+
         float movementSpeed = speed * Time.deltaTime;
         transform.Translate(movementSpeed, 0, 0);
 
@@ -36,6 +38,12 @@ public class EnemyProjectile : EnemyDamage
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (enemyLayer == (enemyLayer | (1 << collision.gameObject.layer)))
+        {
+            // Collision detected with enemy layer, but we don't want any reaction
+            return;
+        }
+        
         hit = true;
         base.OnTriggerEnter2D(collision); //Execute logic from parent script first
         coll.enabled = false;

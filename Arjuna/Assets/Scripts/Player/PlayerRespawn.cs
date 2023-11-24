@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    [SerializeField] private AudioClip checkpoint;
+   // [SerializeField] private AudioClip checkpoint;
     private Transform currentCheckpoint;
     private Health playerHealth;
    // private UIManager uIManager;
@@ -37,10 +37,10 @@ public class PlayerRespawn : MonoBehaviour
             if (collision.gameObject.CompareTag("ChackPoint")) // Periksa tag dengan CompareTag
             {
                 currentCheckpoint = collision.transform;
-                SoundManager.instance.PlaySound(checkpoint);
+                //SoundManager.instance.PlaySound(checkpoint);
                 collision.GetComponent<Collider2D>().enabled = false;
 
-                Animator animator = collision.GetComponent<Animator>();
+                /*Animator animator = collision.GetComponent<Animator>();
                 if (animator != null) // Periksa apakah Animator terpasang sebelum menggunakan SetTrigger
                 {
                     animator.SetTrigger("activate");
@@ -48,7 +48,7 @@ public class PlayerRespawn : MonoBehaviour
                 else
                 {
                     Debug.LogWarning("Animator tidak terpasang pada checkpoint!");
-                }
+                }*/
             }
         }
 }
