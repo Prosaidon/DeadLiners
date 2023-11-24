@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 4609905330782284231}
   - component: {fileID: 2972604125693905266}
   - component: {fileID: 2074574104830133840}
+  - component: {fileID: 1216253137432162853}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -215,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  jumpSound: {fileID: 0}
 --- !u!95 &4609905330782284231
 Animator:
   serializedVersion: 5
@@ -258,6 +260,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  fireballSound: {fileID: 0}
 --- !u!114 &2074574104830133840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,4 +274,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  iFramesDuration: 0
+  numberOfFlashes: 0
   components: []
+  deathSound: {fileID: 0}
+--- !u!114 &1216253137432162853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214415887224812428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5c72f42709d1942be7875757984bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpoint: {fileID: 8300000, guid: b2e0332f101cc1447a5c87384f120306, type: 3}
