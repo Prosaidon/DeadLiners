@@ -10,11 +10,11 @@ public class Health : MonoBehaviour
     private Animator anim;
     private bool dead;
 
-     [Header("iFrames")]
+    [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
-
+    
     [Header("Component")]
     [SerializeField] private Behaviour[] components;
     private bool invulnerable;
@@ -35,15 +35,15 @@ public class Health : MonoBehaviour
         if (invulnerable) return;
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
 
-        /*if (currentHealth > 0)
+        if (currentHealth > 0)
         {
             anim.SetTrigger("hurt");
             StartCoroutine(Invunerability());
             //SoundManager.instance.PlaySound(hurtSound);
         }
         else
-        {*/
-            //anim.SetTrigger("die");
+        {
+            anim.SetTrigger("die");
             if (!dead)
             {
                 anim.SetTrigger("die");
@@ -52,7 +52,7 @@ public class Health : MonoBehaviour
                 dead = true;
                 SoundManager.instance.PlaySound(deathSound);
             }
-        //}
+        }
     }
 
     public void AddHealth(float _value)
@@ -69,7 +69,7 @@ public class Health : MonoBehaviour
 
         foreach (Behaviour component in components)
             component.enabled = true;
-        //dead = false;
+        dead = false;
     }
     private IEnumerator Invunerability()
     {

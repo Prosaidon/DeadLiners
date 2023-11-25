@@ -13,5 +13,6 @@ public class MainMenuManager : MonoBehaviour
     public void Keluar()
     {
         Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
