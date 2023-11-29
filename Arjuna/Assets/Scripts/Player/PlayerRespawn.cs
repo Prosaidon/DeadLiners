@@ -24,7 +24,7 @@ public class PlayerRespawn : MonoBehaviour
             playerHealth.Respawn();
             transform.position = currentCheckpoint.position;
 
-            Camera.main.GetComponent<CameraController>().MoveToNewRoom(currentCheckpoint); // Mengirim transformasi checkpoint ke kamera
+            Camera.main.GetComponent<camera>().MoveToNewRoom(currentCheckpoint); // Mengirim transformasi checkpoint ke kamera
         }
         else
         {

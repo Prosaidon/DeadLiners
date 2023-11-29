@@ -7,8 +7,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private AudioClip gameOverSound;
 
-    [Header ("Pause")]
-    [SerializeField] private GameObject pauseScreen ;
+    [Header("Pause")]
+    [SerializeField] private GameObject pauseScreen;
+
     private void Awake()
     {
         gameOverScreen.SetActive(false);
@@ -20,12 +21,11 @@ public class UIManager : MonoBehaviour
         {
             //If pause screen already active unpause and viceversa
             PauseGame(!pauseScreen.activeInHierarchy);
-            
         }
     }
 
-    #region Game Over Functions
-    //Game over function
+    #region Game Over
+    //Activate game over screen
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    //Activate game over screen
+    //Main Menu
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
@@ -49,9 +49,9 @@ public class UIManager : MonoBehaviour
     {
         Application.Quit(); //Quits the game (only works in build)
 
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false; //Exits play mode
-        #endif
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; //Exits play mode (will only be executed in the editor)
+#endif
     }
     #endregion
 
@@ -68,7 +68,7 @@ public class UIManager : MonoBehaviour
         else
             Time.timeScale = 1;
     }
-    /*pubic void SoundVolume()
+    /*public void SoundVolume()
     {
         SoundManager.instance.ChangeSoundVolume(0.2f);
     }
@@ -77,4 +77,8 @@ public class UIManager : MonoBehaviour
         SoundManager.instance.ChangeMusicVolume(0.2f);
     }*/
     #endregion
+    public void Boss()
+    {
+        SceneManager.LoadScene("Boss");
+    }
 }
