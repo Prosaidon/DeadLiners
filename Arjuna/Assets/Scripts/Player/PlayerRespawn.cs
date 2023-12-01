@@ -15,40 +15,26 @@ public class PlayerRespawn : MonoBehaviour
 
     public void CheckRespawn()
     {
-        if (currentCheckpoint != null) 
+        if (currentCheckpoint == null) 
         {
             uIManager.GameOver();
-            
             return;
-
+        }
             playerHealth.Respawn();
             transform.position = currentCheckpoint.position;
 
-            Camera.main.GetComponent<camera>().MoveToNewRoom(currentCheckpoint); // Mengirim transformasi checkpoint ke kamera
-        }
-        else
-        {
-            Debug.LogWarning("Checkpoint belum diatur!");
-        }
+            Camera.main.GetComponent<camera>().MoveToNewRoom(currentCheckpoint.parent); // Mengirim transformasi checkpoint ke kamera
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.CompareTag("ChackPoint")) // Periksa tag dengan CompareTag
+            if (collision.gameObject.tag == "Checkpoint") // Periksa tag dengan CompareTag
             {
                 currentCheckpoint = collision.transform;
                 //SoundManager.instance.PlaySound(checkpoint);
                 collision.GetComponent<Collider2D>().enabled = false;
+                //collision.GetComponent<Animator>().SetTrigger("activate");
 
-                /*Animator animator = collision.GetComponent<Animator>();
-                if (animator != null) // Periksa apakah Animator terpasang sebelum menggunakan SetTrigger
-                {
-                    animator.SetTrigger("activate");
-                }
-                else
-                {
-                    Debug.LogWarning("Animator tidak terpasang pada checkpoint!");
-                }*/
             }
         }
 }

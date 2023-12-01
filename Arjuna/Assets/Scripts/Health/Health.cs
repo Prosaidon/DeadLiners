@@ -43,8 +43,25 @@ public class Health : MonoBehaviour
         }
         else
         {
-            anim.SetTrigger("die");
-            if (!dead)
+            Die();
+            //anim.SetTrigger("die");
+            /*if (!dead)
+            {
+                anim.SetTrigger("die");
+                foreach(Behaviour compinent in components)
+                    compinent.enabled = false;
+                dead = true;
+                SoundManager.instance.PlaySound(deathSound);
+                
+            
+                
+            }*/
+        }
+    }
+    private void Die()
+    {
+        // Logika yang terjadi saat musuh mati
+        if (!dead)
             {
                 anim.SetTrigger("die");
                 foreach(Behaviour compinent in components)
@@ -52,7 +69,16 @@ public class Health : MonoBehaviour
                 dead = true;
                 SoundManager.instance.PlaySound(deathSound);
             }
+
+        // Panggil UIManager untuk memberi tahu bahwa musuh telah terbunuh
+        UIManager uiManager = FindObjectOfType<UIManager>();
+        if (uiManager != null)
+        {
+            uiManager.EnemyKilled();
         }
+
+        // Matikan GameObject musuh
+        gameObject.SetActive(false);
     }
 
     public void AddHealth(float _value)

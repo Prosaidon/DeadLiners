@@ -10,10 +10,16 @@ public class UIManager : MonoBehaviour
     [Header("Pause")]
     [SerializeField] private GameObject pauseScreen;
 
+    [Header("Win")]
+    [SerializeField] private GameObject winScreen;
+    private int totalEnemies;
+    private int enemiesKilled = 0;
+
     private void Awake()
     {
         gameOverScreen.SetActive(false);
         pauseScreen.SetActive(false);
+        winScreen.SetActive(false);
     }
     private void Update()
     {
@@ -77,6 +83,34 @@ public class UIManager : MonoBehaviour
         SoundManager.instance.ChangeMusicVolume(0.2f);
     }*/
     #endregion
+
+    #region Win
+    public void EnemyKilled()
+    {
+        enemiesKilled++;
+        if (enemiesKilled >= totalEnemies)
+        {
+            ShowWinScreen();
+        }
+    }
+    public void ShowWinScreen()
+    {
+        winScreen.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    #endregion
+
     public void Boss()
     {
         SceneManager.LoadScene("Boss");

@@ -8,11 +8,11 @@ public class level : MonoBehaviour
     // Start is called before the first frame update
       public void Level1()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(2);
     }
-    public void Level2()
+    public void Boss()
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Boss");
     }
     public void Back()
     {
