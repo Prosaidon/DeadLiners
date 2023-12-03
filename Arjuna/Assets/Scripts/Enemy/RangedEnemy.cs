@@ -24,7 +24,7 @@ public class RangedEnemy : MonoBehaviour
 
     //References
     private Animator anim;
-    private Health playerHealth;
+    private PlayerHealth playerHealth;
     private EnemyPatrol enemyPatrol;
 
     private void Awake()
@@ -77,7 +77,7 @@ public class RangedEnemy : MonoBehaviour
             0, Vector2.left, 0, playerLayer);
 
         if (hit.collider != null)
-            playerHealth = hit.transform.GetComponent<Health>();
+            playerHealth = hit.transform.GetComponent<PlayerHealth>();
 
         return hit.collider != null;
     }

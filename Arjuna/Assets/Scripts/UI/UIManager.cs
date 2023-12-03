@@ -12,14 +12,19 @@ public class UIManager : MonoBehaviour
 
     [Header("Win")]
     [SerializeField] private GameObject winScreen;
-    private int totalEnemies;
-    private int enemiesKilled = 0;
+    //private int totalEnemies;
+    //private int enemiesKilled = 2;
+    public static int enemyCount = 2;
 
     private void Awake()
     {
         gameOverScreen.SetActive(false);
         pauseScreen.SetActive(false);
         winScreen.SetActive(false);
+    }
+    private void Start()
+    {
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
     private void Update()
     {
@@ -87,12 +92,18 @@ public class UIManager : MonoBehaviour
     #region Win
     public void EnemyKilled()
     {
-        enemiesKilled++;
-        if (enemiesKilled >= totalEnemies)
+         enemyCount--; // Mengurangi jumlah musuh yang tersisa
+        if (enemyCount <= 0)
         {
-            ShowWinScreen();
+            // Panggil UIManager untuk menampilkan layar kemenangan
+            UIManager uiManager = FindObjectOfType<UIManager>();
+            if (uiManager != null)
+            {
+                uiManager.ShowWinScreen();
+            }
         }
     }
+    
     public void ShowWinScreen()
     {
         winScreen.SetActive(true);
