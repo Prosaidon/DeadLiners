@@ -1,29 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class camera : MonoBehaviour
 {
-  [SerializeField] private float speed;
-    private Vector3 velocity = Vector3.zero;
+    [SerializeField] private Transform target; // Transformasi pemain yang ingin diikuti oleh kamera
+    [SerializeField] private float smoothSpeed = 0.125f; // Kecepatan pergerakan kamera
 
-    private void Update()
+    private Vector3 offset; // Jarak antara kamera dan pemain
+
+    private void Start()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, new Vector3(currentPosX, transform.position.y, transform.position.z), ref velocity, speed);
+        // Menghitung jarak antara kamera dan pemain saat inisialisasi
+        if (target != null)
+        {
+            offset = transform.position - target.position;
+        }
     }
 
-    private float currentPosX;
-
-    public void MoveToNewRoom(Transform _newRoom)
+    private void LateUpdate()
     {
-        if (_newRoom != null) // Pastikan _newRoom bukan null sebelum menggunakannya
+        if (target != null)
         {
-            currentPosX = _newRoom.position.x;
+            // Menghitung posisi target yang diikuti oleh kamera
+            Vector3 desiredPosition = target.position + offset;
+
+            // Menggunakan fungsi SmoothDamp untuk pergerakan yang halus
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+        }
+    }
+
+    // Fungsi untuk mengatur pemain yang ingin diikuti oleh kamera
+    public void SetTarget(Transform newTarget)
+    {
+        if (newTarget != null)
+        {
+            target = newTarget;
+            offset = transform.position - target.position;
         }
         else
         {
-            Debug.LogWarning("Room yang baru belum ditentukan!");
+            Debug.LogWarning("Target pemain tidak valid!");
         }
     }
 }
-

@@ -35,9 +35,9 @@ public class Player : MonoBehaviour
 
         // Flip player saat menghadap kiri atau kanan
         if (horizontalInput > 0.01f)
-            transform.localScale = new Vector3(2, 2, 1);
+            transform.localScale = new Vector3(0.3f, 0.3f, 1f);
         else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(-2, 2, 1);
+            transform.localScale = new Vector3(-0.3f, 0.3f, 1f);
 
         if (Input.GetKey(KeyCode.Space) && grounded)
             Jump();

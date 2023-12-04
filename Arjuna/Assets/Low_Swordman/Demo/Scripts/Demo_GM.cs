@@ -49,51 +49,25 @@ public class Demo_GM : MonoBehaviour {
         {
             Color myColor = new Color32(255, 255, 255, 255);
 
-            Demo_GM.Gm.UIImage[2].color = myColor;
+            Demo_GM.Gm.UIImage[1].color = myColor;
         }
         if (Input.GetKeyUp(KeyCode.D))
         {
             Color myColor = new Color32(255, 255, 255, 255);
 
-            Demo_GM.Gm.UIImage[3].color = myColor;
-        }
-
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            Color myColor = new Color32(255, 255, 255, 255);
-
             Demo_GM.Gm.UIImage[0].color = myColor;
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            Color myColor = new Color32(255, 255, 255, 255);
-
-            Demo_GM.Gm.UIImage[1].color = myColor;
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
             Color myColor = new Color32(180, 180, 180, 255);
 
-            Demo_GM.Gm.UIImage[2].color = myColor;
+            Demo_GM.Gm.UIImage[1].color = myColor;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             Color myColor = new Color32(180, 180, 180, 255);
 
-            Demo_GM.Gm.UIImage[3].color = myColor;
-        }
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Color myColor = new Color32(180, 180, 180, 255);
-
             Demo_GM.Gm.UIImage[0].color = myColor;
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Color myColor = new Color32(180, 180, 180, 255);
-
-            Demo_GM.Gm.UIImage[1].color = myColor;
         }
 
         ///
@@ -101,16 +75,8 @@ public class Demo_GM : MonoBehaviour {
         {
             Color myColor = new Color32(255, 255, 255, 255);
 
-            Demo_GM.Gm.UIImage[4].color = myColor;
-        }
-        if (Input.GetKeyUp(KeyCode.Mouse1))
-        {
-            Color myColor = new Color32(255, 255, 255, 255);
-
-            Demo_GM.Gm.UIImage[5].color = myColor;
-        }
-
-   
+            Demo_GM.Gm.UIImage[3].color = myColor;
+        }    
 
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -118,39 +84,8 @@ public class Demo_GM : MonoBehaviour {
 
             Color myColor = new Color32(180, 180, 180, 255);
 
-            Demo_GM.Gm.UIImage[4].color = myColor;
+            Demo_GM.Gm.UIImage[3].color = myColor;
 
-        }
-
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-
-
-
-            Color myColor = new Color32(180, 180, 180, 255);
-
-            Demo_GM.Gm.UIImage[5].color = myColor;
-
-        }
-
-    
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-
-            Color myColor = new Color32(180, 180, 180, 255);
-
-            Demo_GM.Gm.UIImage[6].color = myColor;
-        }
-
-
-    
-        if (Input.GetKeyUp(KeyCode.Alpha1))
-        {
-
-            Color myColor = new Color32(255, 255, 255, 255);
-
-            Demo_GM.Gm.UIImage[6].color = myColor;
         }
 
 
@@ -159,7 +94,7 @@ public class Demo_GM : MonoBehaviour {
 
             Color myColor = new Color32(180, 180, 180, 255);
 
-            Demo_GM.Gm.UIImage[7].color = myColor;
+            Demo_GM.Gm.UIImage[2].color = myColor;
         }
 
 
@@ -169,7 +104,7 @@ public class Demo_GM : MonoBehaviour {
 
             Color myColor = new Color32(255, 255, 255, 255);
 
-            Demo_GM.Gm.UIImage[7].color = myColor;
+            Demo_GM.Gm.UIImage[2].color = myColor;
         }
 
 

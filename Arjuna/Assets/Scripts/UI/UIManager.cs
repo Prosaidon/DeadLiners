@@ -12,9 +12,8 @@ public class UIManager : MonoBehaviour
 
     [Header("Win")]
     [SerializeField] private GameObject winScreen;
-    //private int totalEnemies;
-    //private int enemiesKilled = 2;
-    public static int enemyCount = 2;
+
+    public static int enemyCount = 5;
 
     private void Awake()
     {
