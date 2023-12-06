@@ -339,8 +339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 5, y: -51}
-  m_SizeDelta: {x: 639.1781, y: 206.3344}
+  m_AnchoredPosition: {x: 16, y: -50}
+  m_SizeDelta: {x: 239.59, y: 66.396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &398336013
 MonoBehaviour:
@@ -628,7 +628,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2137228838}
-        m_TargetAssemblyTypeName: level, Assembly-CSharp
+        m_TargetAssemblyTypeName: MulaiManager, Assembly-CSharp
         m_MethodName: Level1
         m_Mode: 1
         m_Arguments:
