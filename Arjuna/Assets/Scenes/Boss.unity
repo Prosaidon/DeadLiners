@@ -9476,6 +9476,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 291303351603823520, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 291303351603823520, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 291303351603823520, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -9505,11 +9513,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 291303351603823520, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -10.32
+      value: -10.258
       objectReference: {fileID: 0}
     - target: {fileID: 291303351603823520, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.05
+      value: -2.621
       objectReference: {fileID: 0}
     - target: {fileID: 291303351603823520, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9522,6 +9530,34 @@ PrefabInstance:
     - target: {fileID: 291303351603823520, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439075271293040602, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 00773bd6832ba4d4280654e0b1205b93, type: 3}
+    - target: {fileID: 1548921599289644727, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
+      propertyPath: m_Size.x
+      value: 2.0788863
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548921599289644727, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
+      propertyPath: m_Size.y
+      value: 7.7854815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548921599289644727, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.08362642
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548921599289644727, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.033920765
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548921599289644727, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548921599289644727, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 8.29
       objectReference: {fileID: 0}
     - target: {fileID: 2074574104830133840, guid: 6bc32348a85eee34a9cec77ab3d3da2f, type: 3}
       propertyPath: deathSound
