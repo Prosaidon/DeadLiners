@@ -11,8 +11,10 @@ public class Player : MonoBehaviour
     private LayerMask groundLayer; // Tambahkan groundLayer
 
     
-    [Header("SFX")]
-    [SerializeField] private AudioClip jumpSound;
+    //[Header("SFX")]
+    //[SerializeField] private AudioClip jumpSound;
+    AudioManager audioManager;
+    
     
     private Rigidbody2D body;
     private Animator anim;
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         groundLayer = LayerMask.GetMask("Ground"); // Ganti "Ground" sesuai dengan nama layer yang Anda gunakan
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -49,7 +52,8 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        SoundManager.instance.PlaySound(jumpSound);
+        //SoundManager.instance.PlaySound(jumpSound);
+        audioManager.PlaySFX(audioManager.Jump);
         body.velocity = new Vector2(body.velocity.x, speed);
         anim.SetTrigger("jump");
         grounded = false;

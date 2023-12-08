@@ -16,6 +16,9 @@ public class ParallaxControll : MonoBehaviour
     [Range(0.01f, 0.05f)]
     public float parallaxSpeed;
 
+    [Header("Musik")]
+    [SerializeField] private AudioSource BGM;
+
     void Start()
     {
         cam = Camera.main.transform;
@@ -53,12 +56,16 @@ public class ParallaxControll : MonoBehaviour
     private void LateUpdate()
     {
         distance = cam.position.x - camStartPos.x;
-        transform.position = new Vector3(cam.position.x -14f, 1.4f, transform.position.z);
+        float verticalDistance = cam.position.y - camStartPos.y; // Perubahan posisi vertikal kamera
 
-        for (int i = 0; i < backgrounds.Length; i++) // Perbaiki penulisan "Length" yang benar
+        //float newPositionZ = transform.position.z + verticalDistance; // Hitung posisi Z yang baru
+
+        transform.position = new Vector3(cam.position.x - 14f, 0f + verticalDistance, transform.position.z);
+
+        for (int i = 0; i < backgrounds.Length; i++)
         {
             float speed = backSpeed[i] * parallaxSpeed;
-            mat[i].SetTextureOffset("_MainTex", new Vector2(distance, 0) * speed);
+            mat[i].SetTextureOffset("_MainTex", new Vector2(distance, verticalDistance) * speed);
         }
     }
 }

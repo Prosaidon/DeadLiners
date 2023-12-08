@@ -20,14 +20,16 @@ public class PlayerHealth : MonoBehaviour
     private bool invulnerable;
 
 
-    [Header("Death Sound")]
-    [SerializeField] private AudioClip deathSound;
+    //[Header("Death Sound")]
+    //[SerializeField] private AudioClip deathSound;
+    AudioManager audioManager;
 
     private void Awake()
     {
         currentHealth = startingHealth; // Ubah "currentHealt" menjadi "currentHealth"
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     public void TakeDamage(float _damage)
@@ -51,8 +53,8 @@ public class PlayerHealth : MonoBehaviour
                 foreach(Behaviour compinent in components)
                     compinent.enabled = false;
                 dead = true;
-                SoundManager.instance.PlaySound(deathSound);
-                
+                //SoundManager.instance.PlaySound(deathSound);
+                audioManager.PlaySFX(audioManager.death);
             
                 
             }

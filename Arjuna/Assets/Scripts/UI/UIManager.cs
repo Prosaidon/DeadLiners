@@ -5,7 +5,7 @@ public class UIManager : MonoBehaviour
 {
     [Header ("Game Over")]
     [SerializeField] private GameObject gameOverScreen;
-    [SerializeField] private AudioClip gameOverSound;
+    //[SerializeField] private AudioClip gameOverSound;
 
     [Header("Pause")]
     [SerializeField] private GameObject pauseScreen;
@@ -14,16 +14,20 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject winScreen;
 
     public static int enemyCount = 5;
+    AudioManager audioManager;
+
 
     private void Awake()
     {
         gameOverScreen.SetActive(false);
         pauseScreen.SetActive(false);
         winScreen.SetActive(false);
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
     private void Start()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        
     }
     private void Update()
     {
@@ -39,7 +43,8 @@ public class UIManager : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
-        SoundManager.instance.PlaySound(gameOverSound);
+        //SoundManager.instance.PlaySound(gameOverSound);
+        audioManager.PlaySFX(audioManager.GameOver);
     }
 
     //Restart level

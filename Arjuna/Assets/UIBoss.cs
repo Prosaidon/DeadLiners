@@ -5,7 +5,7 @@ public class UIBoss : MonoBehaviour
 {
     [Header ("Game Over")]
     [SerializeField] private GameObject gameOverScreen;
-    [SerializeField] private AudioClip gameOverSound;
+    //[SerializeField] private AudioClip gameOverSound;
 
     [Header("Pause")]
     [SerializeField] private GameObject pauseScreen;
@@ -34,7 +34,7 @@ public class UIBoss : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
-        SoundManager.instance.PlaySound(gameOverSound);
+        //SoundManager.instance.PlaySound(gameOverSound);
     }
 
     //Restart level

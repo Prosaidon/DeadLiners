@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SelectionArrow : MonoBehaviour
 {
-    [SerializeField] private RectTransform[] buttons;
+    /*[SerializeField] private RectTransform[] buttons;
     [SerializeField] private AudioClip changeSound;
     [SerializeField] private AudioClip interactSound;   
     private RectTransform rect;
@@ -49,5 +49,5 @@ public class SelectionArrow : MonoBehaviour
 
         //Access the button component on each option and call its function
         buttons[currentPosition].GetComponent<Button>().onClick.Invoke();
-    }
+    }*/
 }
