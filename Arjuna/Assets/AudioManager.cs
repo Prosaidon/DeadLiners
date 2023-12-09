@@ -15,6 +15,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip Jump;
     public AudioClip ShowrdHit;
 
+    private bool isMusicPaused = false;
+    private float musicVolume = 1.0f;
+
     private void Start()
     {
         musicSource.clip = background;
@@ -25,5 +28,28 @@ public class AudioManager : MonoBehaviour
     {
         SFXSource.PlayOneShot (clip);
     }
+    public void PauseBackgroundMusic()
+    {
+        if (musicSource.isPlaying)
+        {
+            musicSource.Pause();
+            isMusicPaused = true;
+        }
+    }
 
+    public void ResumeBackgroundMusic()
+    {
+        if (isMusicPaused)
+        {
+            musicSource.UnPause();
+            isMusicPaused = false;
+        }
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = Mathf.Clamp01(volume);
+        musicSource.volume = musicVolume;
+    }
 }
+

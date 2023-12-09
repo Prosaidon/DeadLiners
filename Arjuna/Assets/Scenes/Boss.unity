@@ -3635,7 +3635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &489024966
 Transform:
   m_ObjectHideFlags: 0
@@ -14212,16 +14212,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 9e7a86016e7d4e043a6990895d252ea3, type: 3}
     - target: {fileID: 1308228864905464666, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
-      propertyPath: startingHealth
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308228864905464666, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: iFramesDuration
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1308228864905464666, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: numberOfFlashes
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1308228864905464666, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: components.Array.size

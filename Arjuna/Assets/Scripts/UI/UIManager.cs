@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameOverScreen.activeInHierarchy && !winScreen.activeInHierarchy) // Tambahkan kondisi untuk memeriksa layar kalah atau menang sedang aktif atau tidak
         {
             //If pause screen already active unpause and viceversa
             PauseGame(!pauseScreen.activeInHierarchy);
@@ -45,11 +45,13 @@ public class UIManager : MonoBehaviour
         gameOverScreen.SetActive(true);
         //SoundManager.instance.PlaySound(gameOverSound);
         audioManager.PlaySFX(audioManager.GameOver);
+        audioManager.PauseBackgroundMusic();    
     }
 
     //Restart level
     public void Restart()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -79,9 +81,13 @@ public class UIManager : MonoBehaviour
         //When pause status is true change timescale to 0 (time stops)
         //when it's false change it back to 1 (time goes by normally)
         if (status)
+        {
             Time.timeScale = 0;
-        else
-            Time.timeScale = 1;
+            audioManager.PauseBackgroundMusic();
+        }else{
+            Time.timeScale = 0;
+            audioManager.ResumeBackgroundMusic();
+        }
     }
     /*public void SoundVolume()
     {
@@ -110,8 +116,11 @@ public class UIManager : MonoBehaviour
     
     public void ShowWinScreen()
     {
-        winScreen.SetActive(true);
-        Time.timeScale = 0;
+    
+            winScreen.SetActive(true);
+            audioManager.PauseBackgroundMusic();
+            Time.timeScale = 0;
+        
     }
 
     public void RestartGame()
