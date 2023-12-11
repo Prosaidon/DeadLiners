@@ -20,15 +20,15 @@ public class BossHealth : MonoBehaviour
     private bool invulnerable;
 
     AudioManager audioManager;
-    private RangedBoss rangedBoss;
+    public Healtbar healtBar;
     //[Header("Death Sound")]
     //[SerializeField] private AudioClip deathSound;
 
     private void Awake()
     {
-        currentHealth = startingHealth;
-        rangedBoss = GetComponent<RangedBoss>(); 
+        currentHealth = startingHealth; // Ubah "currentHealt" menjadi "currentHealth"
         anim = GetComponent<Animator>();
+        healtBar = FindObjectOfType<Healtbar>();
         spriteRend = GetComponent<SpriteRenderer>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
@@ -37,16 +37,12 @@ public class BossHealth : MonoBehaviour
     {
         if (invulnerable) return;
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
-
-        if(currentHealth <= startingHealth / 2 && !invulnerable)
+        if (currentHealth > 0)
         {
             anim.SetTrigger("hurt");
             StartCoroutine(Invunerability());
+            healtBar.Bar(currentHealth);
             //SoundManager.instance.PlaySound(hurtSound);
-            if (rangedBoss != null)
-            {
-                rangedBoss.DoubleFireRate(); // Panggil fungsi untuk meningkatkan kecepatan tembakan
-            }
         }
         else
         {

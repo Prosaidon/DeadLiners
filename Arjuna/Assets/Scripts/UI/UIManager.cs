@@ -52,7 +52,7 @@ public class UIManager : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(2);
     }
 
     //Main Menu
@@ -85,7 +85,7 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0;
             audioManager.PauseBackgroundMusic();
         }else{
-            Time.timeScale = 0;
+            Time.timeScale = 1;
             audioManager.ResumeBackgroundMusic();
         }
     }
