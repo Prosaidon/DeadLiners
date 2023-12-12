@@ -45,7 +45,8 @@ public class UIManager : MonoBehaviour
         gameOverScreen.SetActive(true);
         //SoundManager.instance.PlaySound(gameOverSound);
         audioManager.PlaySFX(audioManager.GameOver);
-        audioManager.PauseBackgroundMusic();    
+        audioManager.PauseBackgroundMusic();
+        Time.timeScale = 0;    
     }
 
     //Restart level
