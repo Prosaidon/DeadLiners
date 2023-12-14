@@ -26,12 +26,12 @@ public class RangedEnemy : MonoBehaviour
     //References
     private Animator anim;
     private PlayerHealth playerHealth;
-    private EnemyPatrol enemyPatrol;
+    //private EnemyPatrol enemyPatrol;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        //enemyPatrol = GetComponentInParent<EnemyPatrol>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
@@ -48,9 +48,6 @@ public class RangedEnemy : MonoBehaviour
                 anim.SetTrigger("RangeAttack");
             }
         }
-
-        if (enemyPatrol != null)
-            enemyPatrol.enabled = !PlayerInSight();
     }
 
     private void RangedAttack()

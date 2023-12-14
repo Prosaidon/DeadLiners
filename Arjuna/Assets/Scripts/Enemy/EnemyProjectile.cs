@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class EnemyProjectile : EnemyDamage
 {
-    [SerializeField] private float speed;
+    private float speed = 10;
     [SerializeField] private float resetTime;
-     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private LayerMask enemyLayer;
     private float lifetime;
     private Animator anim;
     private BoxCollider2D coll;
@@ -56,5 +56,9 @@ public class EnemyProjectile : EnemyDamage
     private void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
     }
 }

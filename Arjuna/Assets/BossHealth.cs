@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BossHealth : MonoBehaviour
 {
-    [Header ("Health")]
+    [Header("Health")]
     [SerializeField] private float startingHealth;
-    public float currentHealth { get; private set; } // Ubah "currentHealt" menjadi "currentHealth"
+    public float currentHealth { get; private set; } // Merubah "currentHealt" menjadi "currentHealth"
     private Animator anim;
     private bool dead;
 
@@ -17,19 +17,20 @@ public class BossHealth : MonoBehaviour
     
     [Header("Component")]
     [SerializeField] private Behaviour[] components;
+   
     private bool invulnerable;
-
     AudioManager audioManager;
     public Healtbar healtBar;
-    //[Header("Death Sound")]
-    //[SerializeField] private AudioClip deathSound;
+    public RangedBoss rangedBoss;
+    public float originalAttackCooldown;
 
     private void Awake()
     {
-        currentHealth = startingHealth; // Ubah "currentHealt" menjadi "currentHealth"
+        currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         healtBar = FindObjectOfType<Healtbar>();
         spriteRend = GetComponent<SpriteRenderer>();
+        rangedBoss = GetComponentInChildren<RangedBoss>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
@@ -40,48 +41,34 @@ public class BossHealth : MonoBehaviour
         if (currentHealth > 0)
         {
             anim.SetTrigger("hurt");
-            StartCoroutine(Invunerability());
+            StartCoroutine(Invulnerability());
             healtBar.Bar(currentHealth);
-            //SoundManager.instance.PlaySound(hurtSound);
+            ReduceCooldownOnHit(); // Panggil fungsi untuk mengurangi cooldown
+        
         }
         else
         {
             Die();
-            //anim.SetTrigger("die");
-            /*if (!dead)
-            {
-                anim.SetTrigger("die");
-                foreach(Behaviour compinent in components)
-                    compinent.enabled = false;
-                dead = true;
-                SoundManager.instance.PlaySound(deathSound);
-                
-            
-                
-            }*/
         }
     }
+
     private void Die()
     {
-        // Logika yang terjadi saat musuh mati
         if (!dead)
-            {
-                anim.SetTrigger("die");
-                foreach(Behaviour compinent in components)
-                    compinent.enabled = false;
-                dead = true;
-                //SoundManager.instance.PlaySound(deathSound);
-                audioManager.PlaySFX(audioManager.death);
-            }
+        {
+            anim.SetTrigger("die");
+            foreach(Behaviour component in components)
+                component.enabled = false;
+            dead = true;
+            audioManager.PlaySFX(audioManager.death);
+        }
 
-        // Panggil UIManager untuk memberi tahu bahwa musuh telah terbunuh
         UIManager uiManager = FindObjectOfType<UIManager>();
         if (uiManager != null)
         {
             uiManager.EnemyKilled();
         }
 
-        // Matikan GameObject musuh
         gameObject.SetActive(false);
     }
 
@@ -90,18 +77,19 @@ public class BossHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
 
-   public void Respawn()
+    public void Respawn()
     {
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
         anim.Play("IdlePlayer"); 
-        StartCoroutine(Invunerability());
+        StartCoroutine(Invulnerability());
 
         foreach (Behaviour component in components)
             component.enabled = true;
         dead = false;
     }
-    private IEnumerator Invunerability()
+
+    private IEnumerator Invulnerability()
     {
         invulnerable = true;
         Physics2D.IgnoreLayerCollision(10, 11, true);
@@ -114,6 +102,19 @@ public class BossHealth : MonoBehaviour
         }
         Physics2D.IgnoreLayerCollision(10, 11, false);
         invulnerable = false;
+    }
+    public void ReduceCooldownOnHit()
+    {
+        if (!invulnerable && rangedBoss != null && rangedBoss.attackCooldown > 0f) 
+        {
+            rangedBoss.attackCooldown *= 0.5f; // Reduksi 2x dari cooldown
+            StartCoroutine(TemporarilyIncreaseCooldown());
+        }
+    }
+    private IEnumerator TemporarilyIncreaseCooldown()
+    {
+        yield return new WaitForSeconds(5f);
+        rangedBoss.attackCooldown = originalAttackCooldown;
     }
 
     private void Deactivate()

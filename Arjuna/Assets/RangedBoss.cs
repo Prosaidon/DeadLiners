@@ -3,7 +3,7 @@ using UnityEngine;
 public class RangedBoss : MonoBehaviour
 {
     [Header("Attack Parameters")]
-    [SerializeField] private float attackCooldown;
+    public float attackCooldown = 1;
     [SerializeField] private float range;
     [SerializeField] private int damage;
 
@@ -19,21 +19,26 @@ public class RangedBoss : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
-    //[Header("Fireball Sound")]
-    //[SerializeField] private AudioClip fireballSound;
     AudioManager audioManager;
 
     //References
     private Animator anim;
     private PlayerHealth playerHealth;
+    public BossHealth bossHealth;
     private EnemyPatrol enemyPatrol;
-    private float originalAttackCooldown;
+    public float originalAttackCooldown;
+    //private float attackCooldown;
 
     private void Awake()
     {
         originalAttackCooldown = attackCooldown;
         anim = GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        bossHealth = GetComponentInParent<BossHealth>();
+        if (bossHealth != null)
+        {
+            originalAttackCooldown = bossHealth.originalAttackCooldown; // Menggunakan properti originalAttackCooldown dari bossHealth
+        }
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
@@ -90,9 +95,20 @@ public class RangedBoss : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
-    }
+    }   
     public void DoubleFireRate()
     {
-        attackCooldown /= 2; // Meningkatkan kecepatan tembakan menjadi 2x lipat dari nilai aslinya
+      if (bossHealth != null)
+        {
+            bossHealth.ReduceCooldownOnHit();
+            attackCooldown = bossHealth.originalAttackCooldown / 2f;
+        }
     }
+      private void OnAttack()
+        {
+            if (bossHealth != null)
+            {
+                bossHealth.ReduceCooldownOnHit();
+            }
+        }
 }
