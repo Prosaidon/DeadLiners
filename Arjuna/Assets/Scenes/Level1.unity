@@ -444,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &21058720
 Transform:
   m_ObjectHideFlags: 0
@@ -3686,7 +3686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &489024966
 Transform:
   m_ObjectHideFlags: 0
@@ -4816,7 +4816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &595255965
 Transform:
   m_ObjectHideFlags: 0
@@ -7319,7 +7319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -7331,11 +7331,11 @@ PrefabInstance:
       objectReference: {fileID: 465344315, guid: 96cd9c1ebc9e9514baae57371baec580, type: 3}
     - target: {fileID: 1479390331545243777, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1479390331545243777, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1479390331545243777, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7613,6 +7613,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 7529908131582765324, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 645653233b4cc554584ef7516fbb0aa7, type: 3}
     - target: {fileID: 7529908131582765324, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -11250,7 +11254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1158177532
 Transform:
   m_ObjectHideFlags: 0
@@ -15782,7 +15786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1613148004
 Transform:
   m_ObjectHideFlags: 0
