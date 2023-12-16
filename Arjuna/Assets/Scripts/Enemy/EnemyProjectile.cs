@@ -49,8 +49,6 @@ public class EnemyProjectile : EnemyDamage
         coll.enabled = false;
 
         if (anim != null)
-            anim.SetTrigger("Explode"); //When the object is a fireball explode it
-        else
             gameObject.SetActive(false); //When this hits any object deactivate arrow
     }
     private void Deactivate()

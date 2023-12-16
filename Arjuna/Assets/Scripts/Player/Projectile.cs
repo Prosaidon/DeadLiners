@@ -33,7 +33,7 @@ public class Projectile : MonoBehaviour
 
         hit = true;
         boxCollider.enabled = false;
-        anim.SetTrigger("Explode");
+        //anim.SetTrigger("Explode");
 
         Health enemyHealth = collision.GetComponent<Health>();
         BossHealth bossHealth = collision.GetComponent<BossHealth>();
@@ -41,11 +41,14 @@ public class Projectile : MonoBehaviour
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(1);
+            Deactivate();
+            
         }
 
         if (bossHealth != null)
         {
             bossHealth.TakeDamage(1);
+            Deactivate();
         }
 
         // Deactivate the projectile
