@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip GameOver;
     public AudioClip Jump;
     public AudioClip ShowrdHit;
+    public AudioClip Win;
 
     private bool isMusicPaused = false;
     private float musicVolume = 1.0f;

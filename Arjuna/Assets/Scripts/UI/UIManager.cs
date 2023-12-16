@@ -119,6 +119,7 @@ public class UIManager : MonoBehaviour
     {
     
             winScreen.SetActive(true);
+            audioManager.PlaySFX(audioManager.Win);
             audioManager.PauseBackgroundMusic();
             Time.timeScale = 0;
         

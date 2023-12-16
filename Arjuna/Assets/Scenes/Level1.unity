@@ -16267,12 +16267,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1837198522}
   SFXSource: {fileID: 1256189857}
-  background: {fileID: 8300000, guid: a061e8ad8ec7c6444a853b7d99a8d59a, type: 3}
-  death: {fileID: 8300000, guid: 9e7a86016e7d4e043a6990895d252ea3, type: 3}
-  bullet: {fileID: 8300000, guid: 6fc78523be648d647b1f002495ff11be, type: 3}
-  GameOver: {fileID: 8300000, guid: ce619508066de4f4da00c49d136306f1, type: 3}
+  background: {fileID: 8300000, guid: 156b5beee155f3f468a88a2f892298b4, type: 3}
+  death: {fileID: 8300000, guid: 8a616883d289c144a9d5859532d676eb, type: 3}
+  bullet: {fileID: 8300000, guid: 98ebc10383812e041948d2fa363fb379, type: 3}
+  GameOver: {fileID: 8300000, guid: 971bb51e7b6631f40a5e29feab17a30a, type: 3}
   Jump: {fileID: 8300000, guid: f774658f492dd774e8a89003d8642baa, type: 3}
-  ShowrdHit: {fileID: 0}
+  ShowrdHit: {fileID: 8300000, guid: 8a616883d289c144a9d5859532d676eb, type: 3}
+  Win: {fileID: 8300000, guid: e8d713aab9ed39a4ab33af61832b7bf4, type: 3}
 --- !u!4 &1517764820
 Transform:
   m_ObjectHideFlags: 0
