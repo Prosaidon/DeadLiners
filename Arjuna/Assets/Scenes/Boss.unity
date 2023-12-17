@@ -7342,9 +7342,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1343266524}
   lines:
-  - Kemenangan Arjuna melawan pasukan awal dari Karna membuat panas hati Karna Basudewa
-    sendiri. Karna Basudewa dengan berani menantang Arjuna untuk 1 vs 1 di medan
-    pertarungan Baratayudha.
+  - Arjuna's victory against Karna's initial troops warmed the heart of Karna Basudewa
+    himself. Because Basudewa bravely challenged Arjuna to 1 vs 1 on the Baratayudha
+    battle field.
   textSpeed: 0.1
 --- !u!114 &860419799
 MonoBehaviour:
@@ -14642,6 +14642,8 @@ MonoBehaviour:
   Jump: {fileID: 8300000, guid: f774658f492dd774e8a89003d8642baa, type: 3}
   ShowrdHit: {fileID: 0}
   Win: {fileID: 0}
+  Run: {fileID: 0}
+  click: {fileID: 0}
 --- !u!4 &1517764820
 Transform:
   m_ObjectHideFlags: 0

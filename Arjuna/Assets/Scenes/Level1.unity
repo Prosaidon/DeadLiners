@@ -20018,12 +20018,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1291086047}
   lines:
-  - 'Kekalahan pandhawa dengan kurawa saat bermain dadu mengakibatkan pandhawa harus
-    terkena hukuman yaitu mengasingkan diri ke Negeri Wiratha dan dilarang menampakan
-    dirinya di depan para kurawa. '
-  - Singkat cerita, saat perang baratayudha Arjuna menampakkan dirinya di depan Karna
-    beserta prajuritnya. Dengan sigap dan sikap tegas Karna Basudewa memerintahkan
-    prajuritnya untuk menyerang Arjuna.
+  - The defeat of the pandhawa and the kurawa while playing dice resulted in the
+    pandhawa having to be punished, namely going into exile in Wiratha Country and
+    being prohibited from appearing in front of the kurawa.
+  - Long story short, during the Baratayudha war, Arjuna appeared in front of Karna
+    and his soldiers. With alacrity and firm attitude, Karna Basudewa ordered his
+    soldiers to attack Arjuna.
   textSpeed: 0.1
 --- !u!1 &1186378113
 GameObject:
