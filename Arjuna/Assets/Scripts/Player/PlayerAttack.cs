@@ -9,7 +9,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject[] fireballs; // Menggunakan prefab tunggal untuk fireball
     //[SerializeField] private AudioClip fireballSound;
     AudioManager audioManager;
-
+    private Dialog dialog;
     private Animator anim;
     private Player player;
     private float cooldownTimer = Mathf.Infinity;
@@ -18,28 +18,37 @@ public class PlayerAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         player = GetComponent<Player>();
+        dialog = FindObjectOfType<Dialog>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && cooldownTimer > attackCooldown && player.canAttack() && Time.timeScale > 0) // Menggunakan GetMouseButtonDown untuk mengecek klik mouse
+        if (!dialog.isActiveAndEnabled)
         {
-            Attack();
+            if (Input.GetMouseButtonDown(0) && cooldownTimer > attackCooldown && player.canAttack() && Time.timeScale > 0)
+            {
+                Attack();
+            }
         }
-
         cooldownTimer += Time.deltaTime;
     }
 
     private void Attack()
     {
-        //SoundManager.instance.PlaySound(fireballSound);
-        audioManager.PlaySFX(audioManager.bullet);
-        anim.SetTrigger("attack");
-        cooldownTimer = 0;
+        if (!dialog.isActiveAndEnabled) // Memastikan dialog tidak aktif sebelum menyerang
+        {
+            audioManager.PlaySFX(audioManager.bullet);
+            anim.SetTrigger("attack");
+            cooldownTimer = 0;
 
-        fireballs[FindFireball()].transform.position = firePoint.position;
-        fireballs[FindFireball()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+            int fireballIndex = FindFireball();
+            if (fireballIndex != -1)
+            {
+                fireballs[fireballIndex].transform.position = firePoint.position;
+                fireballs[fireballIndex].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+            }
+        }
     }
 
     private int FindFireball()

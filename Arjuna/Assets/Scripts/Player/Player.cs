@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     //[SerializeField] private AudioClip jumpSound;
     AudioManager audioManager;
     
-    
+    private bool canMove = true;
     private Rigidbody2D body;
     private Animator anim;
     private bool grounded; // Tambahkan variabel grounded
@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+       if (canMove)
+       {
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
@@ -44,10 +46,11 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space) && grounded)
             Jump();
-
+        // audioManager.PlaySFX(audioManager.Run);
         // Set parameter animasi
         anim.SetBool("run", Mathf.Abs(horizontalInput) > 0.01f);
         anim.SetBool("grounded", grounded);
+       }
     }
 
     private void Jump()
@@ -76,4 +79,9 @@ public class Player : MonoBehaviour
          // Ambil horizontalInput di sini
         return horizontalInput== 0 && grounded;
     }
+    public void SetCanMove(bool moveStatus)
+    {
+        canMove = moveStatus;
+    }
+  
 }
