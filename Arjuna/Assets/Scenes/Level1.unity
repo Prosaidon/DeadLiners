@@ -362,7 +362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -878,7 +878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &15015099
 Transform:
   m_ObjectHideFlags: 0
@@ -3743,7 +3743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -4416,7 +4416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -6083,7 +6083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &384422014
 Transform:
   m_ObjectHideFlags: 0
@@ -6491,7 +6491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &424795887
 Transform:
   m_ObjectHideFlags: 0
@@ -6947,7 +6947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -8329,7 +8329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -9081,7 +9081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &534693597
 Transform:
   m_ObjectHideFlags: 0
@@ -12920,7 +12920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -13899,7 +13899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -14324,7 +14324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -16250,7 +16250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1010726048
 Transform:
   m_ObjectHideFlags: 0
@@ -17631,7 +17631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -23398,7 +23398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -23945,7 +23945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1360816448
 Transform:
   m_ObjectHideFlags: 0
@@ -24554,7 +24554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 577249674299214813, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122447239243324641, guid: bef9e21eb79298441a65e91f9dfe4bc4, type: 3}
       propertyPath: enemyLayer.m_Bits
@@ -26316,7 +26316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1504550306
 Transform:
   m_ObjectHideFlags: 0
@@ -27678,7 +27678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1612303946
 Transform:
   m_ObjectHideFlags: 0
@@ -28950,7 +28950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1712497155
 Transform:
   m_ObjectHideFlags: 0

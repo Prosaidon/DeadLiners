@@ -1253,7 +1253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &276427764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4507,8 +4507,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.3643, y: -5019.557}
-  m_SizeDelta: {x: 1489.2485, y: 9039.023}
+  m_AnchoredPosition: {x: -19.3643, y: -5511.8315}
+  m_SizeDelta: {x: 1489.2485, y: 10023.572}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &934144281
 MonoBehaviour:
@@ -6428,8 +6428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: -275}
-  m_SizeDelta: {x: 1687.5151, y: 8401.112}
+  m_AnchoredPosition: {x: 28, y: 50}
+  m_SizeDelta: {x: 1687.5151, y: 8672.071}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303673704
 MonoBehaviour:
@@ -6464,13 +6464,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Deadliner'z\n\n\n\n\nTegar Wahyu Akbar\r\nNurmawati\r\n\n\n\n\n\nRizky
-    Hidayatullah\r\nTegar Wahyu Akbar\r\n\n\n\n\nAnak Agung Inten Pramitriyani\r\nHilmahlia
-    Ahnaf Syimah Rosyidah\r\n\n\n\nImada Sulthan \r\n\n\n\n\nRahmat Jamal\r\nWinner
-    \r\n\n\n\n\nArjuna\r\nGalaxy Alien Shooting \r\nMetal Slug\r\nKuruksherta\r\nShadow
-    Night 3\r\n\n\n\nMBKM\nInfinite Learning\nUniversitas Jember\r\nUniversitas Haluoleo\r\nUniversitas
-    Pamulang\r\nUniversitas Pembangunan Nasional\r\nPoliteknik Elektronika Negeri
-    Surabaya\r\nSekolah Tinggi Teknologi Terpadu Nurul Fikri\r\n"
+  m_Text: "\nDeadliner'z\n\n\n\n\nTegar Wahyu Akbar\r\nNurmawati\r\n\n\n\n\n\nRizky
+    Hidayatullah\r\nTegar Wahyu Akbar\r\n\n\n\n\n\n\nAnak Agung Inten Pramitriyani\r\nHilmahlia
+    Ahnaf Syimah Rosyidah\r\n\n\n\n\n\nImada Sulthan \r\n\n\n\n\n\nRahmat Jamal\r\nWinner
+    \r\n\n\n\nArjuna\r\nGalaxy Alien Shooting \r\nMetal Slug\r\nKuruksherta\r\nShadow
+    Night 3\r\n\n\n\n\n\nMBKM\nInfinite Learning\nUniversitas Jember\r\nUniversitas
+    Haluoleo\r\nUniversitas Pamulang\r\nUniversitas Pembangunan Nasional\r\nPoliteknik
+    Elektronika Negeri Surabaya\r\nSekolah Tinggi Teknologi Terpadu Nurul Fikri\r\n"
 --- !u!222 &1303673705
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8902,7 +8902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1855098274
 RectTransform:
   m_ObjectHideFlags: 0
