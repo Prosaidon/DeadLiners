@@ -16,8 +16,7 @@ public class ParallaxControll : MonoBehaviour
     [Range(0.01f, 0.05f)]
     public float parallaxSpeed;
 
-    [Header("Musik")]
-    [SerializeField] private AudioSource BGM;
+    
 
     void Start()
     {

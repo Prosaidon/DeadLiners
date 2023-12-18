@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     [Header("Win")]
     [SerializeField] private GameObject winScreen;
 
-    public static int enemyCount = 19;
+    public static int enemyCount = 21;
     AudioManager audioManager;
 
 
