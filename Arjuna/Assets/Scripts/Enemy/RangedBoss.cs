@@ -52,7 +52,7 @@ public class RangedBoss : MonoBehaviour
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
-                anim.SetTrigger("RangeAttack");
+                anim.SetTrigger("RangedBoss");
             }
         }
 
