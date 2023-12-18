@@ -55,16 +55,13 @@ public class ParallaxControll : MonoBehaviour
     private void LateUpdate()
     {
         distance = cam.position.x - camStartPos.x;
-        float verticalDistance = cam.position.y - camStartPos.y; // Perubahan posisi vertikal kamera
 
-        //float newPositionZ = transform.position.z + verticalDistance; // Hitung posisi Z yang baru
-
-        transform.position = new Vector3(cam.position.x - 14f, 0f + verticalDistance, transform.position.z);
+        transform.position = new Vector3(cam.position.x - 14f, transform.position.y, transform.position.z);
 
         for (int i = 0; i < backgrounds.Length; i++)
         {
             float speed = backSpeed[i] * parallaxSpeed;
-            mat[i].SetTextureOffset("_MainTex", new Vector2(distance, verticalDistance) * speed);
+            mat[i].SetTextureOffset("_MainTex", new Vector2(distance * speed, 0f));
         }
     }
 }
