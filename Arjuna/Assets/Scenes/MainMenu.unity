@@ -2776,7 +2776,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3e73e867ec611a34a95211bbc576f453, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4545,7 +4545,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'The legend of Arjuna
 
-    
+
 
     Directed by
 
@@ -4556,7 +4556,7 @@ MonoBehaviour:
 
 
 
-    
+
 
 
     Game
@@ -4566,30 +4566,30 @@ MonoBehaviour:
 
 
 
-    
+
 
     Game Artist
 
 
-    
+
 
 
 
 
     Sound Design
 
-    
 
 
 
-    Mentor
-    Group
+
+    Mentor Group
 
 
 
-    
 
-    Mechanic Refrence
+
+    Mechanic
+    Refrence
 
 
 
@@ -4611,8 +4611,7 @@ MonoBehaviour:
 
 
 
-    Terima
-    Kasih
+    Terima Kasih
 
 '
 --- !u!222 &934144282
