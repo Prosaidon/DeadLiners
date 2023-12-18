@@ -5108,7 +5108,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1232766507}
-  - {fileID: 140898549033969923}
   - {fileID: 7251461323729273913}
   - {fileID: 489024966}
   - {fileID: 535813798}
@@ -8000,7 +7999,7 @@ Transform:
   m_GameObject: {fileID: 956521606}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 14.73, y: -3.55, z: 0.89}
+  m_LocalPosition: {x: 14.86, y: -3.55, z: 0.89}
   m_LocalScale: {x: 2, y: 1, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12216,7 +12215,7 @@ Transform:
   m_GameObject: {fileID: 1284131319}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 14.75, y: -0.79, z: 0.263372}
+  m_LocalPosition: {x: 14.75, y: -1.04, z: 0.26}
   m_LocalScale: {x: 2, y: 1, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17295,7 +17294,7 @@ Transform:
   m_GameObject: {fileID: 1860878536}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 14.8, y: -1.11, z: 1.6}
+  m_LocalPosition: {x: 14.8, y: -1.36, z: 1.6}
   m_LocalScale: {x: 2, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19816,13 +19815,13 @@ Transform:
   m_GameObject: {fileID: 8646209730338098435}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.08, y: -2.58, z: 0}
+  m_LocalPosition: {x: 3.4099998, y: 0.93000007, z: -0.011746477}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1956143647885767848}
   - {fileID: 1522469793601317231}
-  m_Father: {fileID: 628141778}
+  m_Father: {fileID: 7251461323729273913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &142572493619604843
 GameObject:
@@ -21222,6 +21221,7 @@ Transform:
   m_Children:
   - {fileID: 3325163011083896157}
   - {fileID: 2906625418951288159}
+  - {fileID: 140898549033969923}
   m_Father: {fileID: 628141778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7309328174672354169
@@ -21240,7 +21240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &8199195001416109964
 BoxCollider2D:
   m_ObjectHideFlags: 0

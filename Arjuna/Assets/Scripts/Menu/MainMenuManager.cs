@@ -12,9 +12,10 @@ public class MainMenuManager : MonoBehaviour
 
     public void Keluar()
     {
-        Application.Quit();
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
-
-    
 }

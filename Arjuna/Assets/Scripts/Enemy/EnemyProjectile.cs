@@ -36,7 +36,7 @@ public class EnemyProjectile : EnemyDamage
             gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private new void OnTriggerEnter2D(Collider2D collision)
     {
         if (enemyLayer == (enemyLayer | (1 << collision.gameObject.layer)))
         {
@@ -45,11 +45,11 @@ public class EnemyProjectile : EnemyDamage
         }
         
         hit = true;
-        base.OnTriggerEnter2D(collision); //Execute logic from parent script first
+        base.OnTriggerEnter2D(collision); // Execute logic from parent script first
         coll.enabled = false;
 
         if (anim != null)
-            gameObject.SetActive(false); //When this hits any object deactivate arrow
+            gameObject.SetActive(false); // When this hits any object deactivate arrow
     }
     private void Deactivate()
     {
