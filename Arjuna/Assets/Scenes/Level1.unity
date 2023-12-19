@@ -3163,7 +3163,7 @@ PrefabInstance:
     - target: {fileID: 4134148927812949941, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: aa656c84638cfd84a9bf2fe6e1289c6e, type: 2}
+      objectReference: {fileID: 9100000, guid: 3e99c112f17f07244857a42de6e0fa14, type: 2}
     - target: {fileID: 4178892815590612058, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -13603,7 +13603,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &847437381
 Transform:
   m_ObjectHideFlags: 0
@@ -13737,7 +13737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755375497602442300, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7212851366456914150, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: m_Sprite
@@ -15043,7 +15043,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &911102444
 Transform:
   m_ObjectHideFlags: 0
@@ -15242,7 +15242,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &941465799
 Transform:
   m_ObjectHideFlags: 0
@@ -21621,7 +21621,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1256159699
 Transform:
   m_ObjectHideFlags: 0
@@ -22745,7 +22745,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1312454580
 Transform:
   m_ObjectHideFlags: 0
@@ -23146,7 +23146,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1351338719
 Transform:
   m_ObjectHideFlags: 0
@@ -26041,7 +26041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755375497602442300, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7212851366456914150, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: m_Sprite
@@ -27147,7 +27147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755375497602442300, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7212851366456914150, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: m_Sprite
@@ -29274,7 +29274,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1733052924
 Transform:
   m_ObjectHideFlags: 0
@@ -29883,7 +29883,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1785652293
 Transform:
   m_ObjectHideFlags: 0
@@ -30521,7 +30521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755375497602442300, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7212851366456914150, guid: 089e926c330c9f74f9b07cae568f06a4, type: 3}
       propertyPath: m_Sprite
